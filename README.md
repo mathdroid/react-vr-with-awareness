@@ -10,7 +10,7 @@ import React from "react";
 import { AppRegistry, Text, View } from "react-vr";
 
 // import
-const withAwareness = require("./with-awareness");
+const withAwareness = require("with-awareness");
 
 // create component
 const AwareComponent = withAwareness(({ beingLookedAt }) => (
