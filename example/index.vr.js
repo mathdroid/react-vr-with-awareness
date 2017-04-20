@@ -1,6 +1,6 @@
 import React from "react";
 import { AppRegistry, Text, View } from "react-vr";
-const withAwareness = require("./with-awareness");
+const withAwareness = require("with-awareness");
 
 const AwareComponent = withAwareness(({ beingLookedAt }) => (
   <Text
