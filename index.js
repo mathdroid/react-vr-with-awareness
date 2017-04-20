@@ -1,7 +1,7 @@
 const React = require("react");
 const { View } = require("react-vr");
 
-const WithAwareness = fn =>
+const withAwareness = fn =>
   class extends React.Component {
     constructor() {
       super();
@@ -12,14 +12,15 @@ const WithAwareness = fn =>
 
     render() {
       return (
-        <View
-          onEnter={() => this.setState({ beingLookedAt: true })}
-          onExit={() => this.setState({ beingLookedAt: false })}
-        >
-          {fn(this.state)}
+        <View>
+          {fn({
+            ...this.state,
+            onEnter: () => this.setState({ beingLookedAt: true }),
+            onExit: () => this.setState({ beingLookedAt: false })
+          })}
         </View>
       );
     }
   };
 
-module.exports = WithAwareness;
+module.exports = withAwareness;
