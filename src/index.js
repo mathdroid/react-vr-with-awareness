@@ -12,12 +12,10 @@ const withAwareness = fn =>
     }
 
     handleEnter() {
-      console.log("awww");
       this.setState({ beingLookedAt: true });
     }
 
     handleExit() {
-      console.log("noo");
       this.setState({ beingLookedAt: false });
     }
 
