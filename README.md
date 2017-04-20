@@ -1,5 +1,5 @@
 # with-awareness
-👀 HOC for creating aware components
+👀 HOC for creating aware components in ReactVR
 
 ## Usage
 
