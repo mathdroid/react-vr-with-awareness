@@ -23,13 +23,5 @@
   "scripts": {
     "release": "np",
     "build": "babel src -d dist"
-  },
-  "babel": {
-    "presets": [
-      "env"
-    ],
-    "plugins": [
-      "transform-react-jsx"
-    ]
   }
 }
