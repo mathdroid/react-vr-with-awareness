@@ -1,4 +1,4 @@
-# with-awareness
+# react-vr-with-awareness
 👀 HOC for creating aware components in ReactVR
 
 <img src="./with-awareness.gif"/>
@@ -10,7 +10,7 @@ import React from "react";
 import { AppRegistry, Text, View } from "react-vr";
 
 // import
-const withAwareness = require("with-awareness");
+const withAwareness = require("react-vr-with-awareness");
 
 // create component
 const AwareComponent = withAwareness(({ beingLookedAt }) => (

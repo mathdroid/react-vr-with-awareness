@@ -1,6 +1,6 @@
 {
-  "name": "with-awareness",
-  "version": "1.3.2",
+  "name": "react-vr-with-awareness",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "files": [
     "package.json",
