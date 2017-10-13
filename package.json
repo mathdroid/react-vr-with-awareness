@@ -1,13 +1,8 @@
 {
   "name": "react-vr-with-awareness",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "main": "dist/index.js",
-  "files": [
-    "package.json",
-    "README.md",
-    "LICENSE",
-    "dist"
-  ],
+  "files": ["package.json", "README.md", "LICENSE", "dist"],
   "repository": "git@github.com:mathdroid/with-awareness",
   "author": "<muhammad.mustadi@gmail.com>",
   "license": "MIT",
