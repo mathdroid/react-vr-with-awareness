@@ -1,17 +1,18 @@
 {
   "name": "react-vr-with-awareness",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "main": "dist/index.js",
   "files": ["package.json", "README.md", "LICENSE", "dist"],
   "repository": "git@github.com:mathdroid/with-awareness",
   "author": "<muhammad.mustadi@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "react": "^15.5.4",
     "babel-cli": "^6.24.1",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.4.0",
-    "np": "^2.13.2"
+    "np": "^2.13.2",
+    "prop-types": "^15.6.0",
+    "react": "^15.5.4"
   },
   "scripts": {
     "release": "np",

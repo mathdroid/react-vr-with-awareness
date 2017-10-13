@@ -1,36 +1,39 @@
 const React = require("react");
+const PropTypes = require("prop-types");
 
-const withAwareness = fn =>
-  class extends React.Component {
-    constructor() {
-      super();
-      this.state = {
-        beingLookedAt: false
-      };
-      this.handleEnter = this.handleEnter.bind(this);
-      this.handleExit = this.handleExit.bind(this);
-    }
+const withAwareness = fn => <Aware render={fn} />;
 
-    handleEnter() {
-      this.setState({ beingLookedAt: true });
-    }
+class Aware extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      beingLookedAt: false
+    };
+    this.handleEnter = this.handleEnter.bind(this);
+    this.handleExit = this.handleExit.bind(this);
+  }
 
-    handleExit() {
-      this.setState({ beingLookedAt: false });
-    }
+  handleEnter() {
+    this.setState({ beingLookedAt: true });
+  }
 
-    render() {
-      const { beingLookedAt } = this.state;
-      return React.cloneElement(
-        fn({
-          beingLookedAt
-        }),
-        {
-          onEnter: this.handleEnter,
-          onExit: this.handleExit
-        }
-      );
-    }
-  };
+  handleExit() {
+    this.setState({ beingLookedAt: false });
+  }
 
-module.exports = withAwareness;
+  render() {
+    const { beingLookedAt } = this.state;
+    return React.cloneElement(this.props.render(beingLookedAt), {
+      onEnter: this.handleEnter,
+      onExit: this.handleExit
+    });
+  }
+}
+
+Aware.propTypes = {
+  render: PropTypes.func.isRequired
+};
+
+Aware.withAwareness = withAwareness;
+
+module.exports = Aware;
